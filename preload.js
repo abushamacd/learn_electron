@@ -4,4 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-window.test = "testing";
+// window.test = "testing";
+
+const { contextBridge } = require("electron");
+
+contextBridge.exposeInMainWorld("test", "Hello World");
